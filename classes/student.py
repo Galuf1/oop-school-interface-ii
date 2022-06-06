@@ -8,6 +8,10 @@ class Student(Person):
         super().__init__(name, age, password, role)
         self.school_id = school_id
 
+    def __str__(self):
+        name = self.name.upper()
+        return f"\n{name}\n---------------\nage: {self.age}\nid: {self.school_id}\n" 
+
     @classmethod
     def objects(cls):
         students = []
